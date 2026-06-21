@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/navigation/Navigation";
 import { Footer } from "@/components/sections/Footer";
+import { LiveScoresTicker } from "@/components/live-scores/LiveScoresTicker";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="bg-black text-white antialiased">
         <Navigation />
+        <LiveScoresTicker />
         <main>{children}</main>
         <Footer />
       </body>
